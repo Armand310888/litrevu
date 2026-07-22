@@ -119,3 +119,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'authentication.User'
+
+LOGIN_REDIRECT_URL = 'feed'
