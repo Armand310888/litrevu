@@ -1,9 +1,11 @@
-<h1>Bienvenue sur le feed</h1>
+{% extends "base.html" %}
 
-<form method="post" action="{% url 'authentication:logout' %}">
-    {% csrf_token %}
+{% block title %}
+Flux - LITRevu
+{% endblock title %}
 
-    <button type="submit">
-        Se déconnecter
-    </button>
-</form>
+{% block content %}
+
+<h2>Bienvenue sur le feed</h2>
+
+{% endblock content %}

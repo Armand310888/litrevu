@@ -1,0 +1,22 @@
+<header>
+    <h1>LITRevu</h1>
+
+    {% if user.is_authenticated %}
+        <nav>
+            <ul>
+                <li><a href="{% url 'feed:feed' %}">Flux</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Abonnements</a></li>
+                <li>
+                    <form method="post" action="{% url 'authentication:logout' %}">
+                        {% csrf_token %}
+
+                        <button type="submit">
+                            Se déconnecter
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    {% endif %}
+</header>
