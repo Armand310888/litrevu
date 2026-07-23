@@ -120,4 +120,8 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'authentication.User'
 
-LOGIN_REDIRECT_URL = 'feed'
+LOGIN_REDIRECT_URL = 'feed:feed'
+
+LOGOUT_REDIRECT_URL = 'authentication:homepage'
+
+LOGIN_URL = 'authentication:homepage'
